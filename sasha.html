@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ответы Насти</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#1b2352" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="./assets/heart.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./sasha.css" />
+  </head>
+  <body class="sasha">
+    <div class="sky-bg" aria-hidden="true"></div>
+    <header class="topbar sasha-bar">
+      <a class="brand" href="./" aria-label="В игру"
+        ><span class="brand-hand">Для Саши</span></a
+      >
+      <span class="sasha-note">Ответы хранятся только в этом браузере</span>
+    </header>
+    <main id="main" tabindex="-1">
+      <header class="page-heading">
+        <span class="eyebrow">Что Настя рассказала</span>
+        <h1>Ответы Насти</h1>
+        <p id="summary">Загружаю…</p>
+      </header>
+      <div id="flash" class="flash" role="status" hidden></div>
+      <section class="import tile">
+        <h2>Добавить ответы</h2>
+        <p class="tile-text">
+          Открой ссылку из сообщения Насти, и ответы добавятся сами. Если ссылка
+          не открывается, вставь сообщение целиком сюда.
+        </p>
+        <label class="sr" for="paste">Сообщение или код от Насти</label>
+        <textarea
+          id="paste"
+          class="share-text"
+          rows="3"
+          placeholder="Вставь сообщение от Насти"
+        ></textarea>
+        <div class="import-actions">
+          <button class="btn" id="add">Добавить</button
+          ><label class="btn ghost file-btn"
+            >Загрузить файл .json<input type="file" id="file" accept=".json,application/json"
+          /></label>
+        </div>
+        <p class="import-error" id="error" hidden></p>
+      </section>
+      <div class="export-bar" id="export" hidden>
+        <button class="btn" id="copy-md">Скопировать список</button
+        ><button class="btn ghost" id="save-md">Скачать .md</button
+        ><button class="btn ghost" id="save-json">Скачать .json</button
+        ><button class="link" id="clear">Очистить всё</button>
+      </div>
+      <div class="dossier" id="dossier"></div>
+    </main>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="./vault.js" defer></script>
+    <script src="./inbox.js" defer></script>
+    <script src="./share.js" defer></script>
+    <script src="./sasha.js" defer></script>
+  </body>
+</html>

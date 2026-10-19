@@ -1,0 +1,208 @@
+/* Sasha's page reuses the game tokens; only the dossier layout lives here. */
+.sasha-bar {
+  grid-template-columns: auto 1fr;
+}
+.sasha-note {
+  justify-self: end;
+  color: var(--dim);
+  font-size: 13px;
+}
+.sasha main {
+  max-width: 980px;
+}
+.flash {
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  border-radius: var(--r-md);
+  background: var(--lantern-soft);
+  color: var(--lantern);
+}
+.import {
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+.import h2 {
+  font-size: 18px;
+}
+.import-actions,
+.export-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.export-bar {
+  margin-bottom: 26px;
+}
+.file-btn {
+  position: relative;
+  overflow: hidden;
+}
+.file-btn input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.import-error {
+  color: var(--warn);
+}
+.dossier {
+  display: grid;
+  gap: 28px;
+}
+.dossier-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  position: sticky;
+  top: calc(64px + env(safe-area-inset-top, 0px));
+  z-index: 5;
+  padding: 10px 0;
+  background: var(--ink);
+}
+.dossier-nav a {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--mist);
+  font-size: 14px;
+}
+.dossier-sec {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  scroll-margin-top: 130px;
+}
+.dossier-sec > h2 {
+  grid-column: 1 / -1;
+  font-size: 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.dossier-sec > h2 small {
+  font: 500 14px var(--body);
+  color: var(--dim);
+}
+.said-card {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  padding: 16px 18px;
+  border-radius: var(--r-lg);
+}
+.said-card .q {
+  font-size: 14px;
+  color: var(--paper-mute);
+}
+.said {
+  font-size: 26px;
+  line-height: 1.2;
+  white-space: pre-wrap;
+}
+.why {
+  font-size: 21px;
+  line-height: 1.2;
+  color: var(--paper-mute);
+  padding-left: 12px;
+  border-left: 2px solid var(--lantern);
+}
+.said-card time {
+  font-size: 12px;
+  color: var(--paper-mute);
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tags span {
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--paper-ink);
+  color: var(--paper);
+  font-size: 14px;
+}
+.tags.big {
+  grid-column: 1 / -1;
+}
+.tags.big span {
+  background: var(--night);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+.tags em {
+  font-style: normal;
+  color: var(--dim);
+  font-size: 12px;
+}
+.scale-read {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--paper-mute);
+}
+.scale-read span:last-child {
+  text-align: right;
+}
+.dots {
+  display: flex;
+  gap: 5px;
+}
+.dots i {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid var(--paper-ink);
+}
+.dots i.on {
+  background: var(--paper-ink);
+}
+.open-q {
+  display: block;
+  padding: 16px 18px;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--line);
+  background: var(--night);
+}
+.open-q summary {
+  cursor: pointer;
+  font-weight: 500;
+}
+.open-q ul {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+.open-q li {
+  display: grid;
+  gap: 2px;
+  color: var(--mist);
+}
+.open-q li span {
+  font-size: 12px;
+  color: var(--dim);
+}
+@media (max-width: 760px) {
+  .sasha main {
+    padding-bottom: 40px;
+  }
+  .sasha-note {
+    display: none;
+  }
+  .dossier-nav {
+    top: calc(52px + env(safe-area-inset-top, 0px));
+  }
+}
+
+.tags.big span.up {
+  border-color: #9fd3b066;
+}
+.tags.big span.down {
+  opacity: 0.7;
+}

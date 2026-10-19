@@ -1,0 +1,19 @@
+{
+  "name": "Ты - моя вселенная",
+  "short_name": "Для Насти",
+  "description": "Игра для Насти от Саши",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1b2352",
+  "theme_color": "#1b2352",
+  "lang": "ru",
+  "icons": [
+    { "src": "./assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "./assets/heart.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
